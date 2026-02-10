@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swiss Matura – Major Economics and Law</title>
+    <style>
+        :root {
+            --max-width: 1200px;
+            --text: #333;
+            --link: #0563c1;
+            --border: #777;
+
+            /* Categories */
+            --bg-languages: #4472c4;
+            /* Blue */
+            --bg-sciences: #70ad47;
+            /* Green */
+            --bg-math: #595959;
+            /* Dark Grey */
+            --bg-humanities: #ed7d31;
+            /* Orange-ish (New for variety) or reuse */
+            --bg-major: #ffc000;
+            /* Gold/Yellow for Major */
+            --bg-arts: #a5a5a5;
+            /* Grey */
+
+            /* Reusing EFZ palette if preferred for consistency, but Matura subjects are different */
+            /* Let's stick to the EFZ palette to look "so gleich wie möglich" */
+            --bg-blue: #4472c4;
+            --bg-green-light: #92d050;
+            --bg-dark-grey: #595959;
+            --bg-devops: #6b8e23;
+            --bg-general-prog: #92d050;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            color: var(--text);
+            background: #fff;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: var(--max-width);
+            padding: 16px;
+        }
+
+        .header-title {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .content-row {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 12px;
+            align-items: flex-start;
+        }
+
+        .column {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .box {
+            border: 1px solid var(--border);
+            padding: 8px;
+            text-align: center;
+            color: #fff;
+            font-size: 13px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 80px;
+            word-break: break-word;
+        }
+
+        .box h3 {
+            margin: 0 0 5px 0;
+            font-size: 14px;
+            text-decoration: underline;
+        }
+
+        .box ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            font-size: 11px;
+        }
+
+        .box ul li {
+            margin-bottom: 2px;
+        }
+
+        .label-box {
+            min-height: 38px;
+            font-size: 14px;
+            border: none;
+            background: transparent;
+            color: #333;
+            /* Text color for label outside box */
+            font-weight: bold;
+            text-align: center;
+        }
+
+        /* Colors mapped to EFZ style */
+        .bg-languages {
+            background: var(--bg-blue);
+        }
+
+        .bg-sciences {
+            background: var(--bg-green-light);
+        }
+
+        .bg-math {
+            background: var(--bg-dark-grey);
+        }
+
+        .bg-major {
+            background: var(--bg-devops);
+        }
+
+        /* Olive */
+        .bg-humanities {
+            background: var(--bg-general-prog);
+        }
+
+        /* Light Green */
+        .bg-arts {
+            background: #7030a0;
+        }
+
+        /* Purple for Arts - custom */
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1 class="header-title">Curriculum – Swiss Matura – Major Economics and Law</h1>
+
+        <div class="content-row">
+            <!-- Column 1: Languages -->
+            <div class="column">
+                <div class="label-box">Languages</div>
+                <div class="box bg-languages">
+                    <h3>German</h3>
+                    <ul>
+                        <li>Mastery of language</li>
+                        <li>Oral & written</li>
+                        <li>Literary works</li>
+                    </ul>
+                </div>
+                <div class="box bg-languages">
+                    <h3>English</h3>
+                    <ul>
+                        <li>Oral & written comm.</li>
+                        <li>Literary knowledge</li>
+                    </ul>
+                </div>
+                <div class="box bg-languages">
+                    <h3>Italian</h3>
+                    <ul>
+                        <li>Oral & written comm.</li>
+                        <li>Literary knowledge</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Column 2: Major -->
+            <div class="column">
+                <div class="label-box">Major Subject</div>
+                <div class="box bg-major" style="flex-grow: 1;">
+                    <h3>Economics and Law</h3>
+                    <ul>
+                        <li>Work and employment</li>
+                        <li>Market and competition</li>
+                        <li>Money & The enterprise</li>
+                        <li>Financial markets</li>
+                        <li>Public economy</li>
+                        <li>Accounting</li>
+                        <li>Law</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Column 3: Sciences -->
+            <div class="column">
+                <div class="label-box">Sciences</div>
+                <div class="box bg-sciences">
+                    <h3>Biology</h3>
+                    <ul>
+                        <li>Cell biology & genetics</li>
+                        <li>Human biology</li>
+                        <li>Environment</li>
+                        <li>Evolution</li>
+                    </ul>
+                </div>
+                <div class="box bg-sciences">
+                    <h3>Chemistry</h3>
+                    <ul>
+                        <li>Substances</li>
+                        <li>Atomic structure</li>
+                        <li>Reactions</li>
+                        <li>Everyday relevance</li>
+                    </ul>
+                </div>
+                <div class="box bg-sciences">
+                    <h3>Physics</h3>
+                    <ul>
+                        <li>Mechanics</li>
+                        <li>Thermal phenomena</li>
+                        <li>Electrodynamics</li>
+                        <li>Optics & waves</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Column 4: Humanities -->
+            <div class="column">
+                <div class="label-box">Humanities</div>
+                <div class="box bg-humanities">
+                    <h3>History</h3>
+                    <ul>
+                        <li>Historical sources</li>
+                        <li>Human rights</li>
+                        <li>Economy & history</li>
+                        <li>Greeks to present</li>
+                        <li>Civics</li>
+                    </ul>
+                </div>
+                <div class="box bg-humanities">
+                    <h3>Geography</h3>
+                    <ul>
+                        <li>Physical-geographical</li>
+                        <li>Population, settlement</li>
+                        <li>Spatial planning</li>
+                        <li>Economy & development</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Column 5: Math & Arts -->
+            <div class="column">
+                <div class="label-box">Math & Arts</div>
+                <div class="box bg-math">
+                    <h3>Maths</h3>
+                    <ul>
+                        <li>Algebra</li>
+                        <li>Geometry</li>
+                        <li>Stochastics</li>
+                        <li>Analysis</li>
+                    </ul>
+                </div>
+                <div class="box bg-arts">
+                    <h3>Visual Arts</h3>
+                    <ul>
+                        <li>Creative expression</li>
+                        <li>Art history</li>
+                        <li>Techniques</li>
+                    </ul>
+                </div>
+                <div class="box bg-major" style="background:#555; margin-top: 20px;">
+                    <h3>Exam Types</h3>
+                    <ul>
+                        <li>Written exam</li>
+                        <li>Presentations</li>
+                        <li>Oral exams</li>
+                        <li>Class participation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
