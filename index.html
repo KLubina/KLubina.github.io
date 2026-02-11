@@ -28,24 +28,53 @@
         <section class="app-landscape">
             <h2>My App Landscape</h2>
             <p>Essential apps I built and use daily</p>
-            <div class="apps-grid">
-                <a href="https://github.com/KLubina/FitnessDashboard" target="_blank" class="app-card">
+            <div class="app-network-map">
+                <svg class="network-lines" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                            <polygon points="0 0, 10 3.5, 0 7" fill="#999" />
+                        </marker>
+                        <marker id="arrowhead-reverse" markerWidth="10" markerHeight="7" refX="1" refY="3.5"
+                            orient="auto">
+                            <polygon points="10 0, 0 3.5, 10 7" fill="#999" />
+                        </marker>
+                    </defs>
+                    <!-- WeightTracker (Left Bottom) to FitnessDashboard (Top Center) -->
+                    <line x1="20%" y1="75%" x2="40%" y2="25%" stroke="#999" stroke-width="2"
+                        marker-end="url(#arrowhead)" />
+
+                    <!-- NutritionTracker (Center Bottom) to NutritionPlanner (Center Middle) -->
+                    <line x1="50%" y1="78%" x2="50%" y2="62%" stroke="#999" stroke-width="2"
+                        marker-start="url(#arrowhead-reverse)" marker-end="url(#arrowhead)" />
+
+                    <!-- NutritionPlanner (Center Middle) to FitnessDashboard (Top Center) -->
+                    <line x1="50%" y1="40%" x2="50%" y2="25%" stroke="#999" stroke-width="2"
+                        marker-end="url(#arrowhead)" />
+
+                    <!-- StepPlanner (Right Middle) to FitnessDashboard (Top Center) -->
+                    <line x1="80%" y1="50%" x2="60%" y2="25%" stroke="#999" stroke-width="2"
+                        marker-end="url(#arrowhead)" />
+                </svg>
+
+                <a href="https://github.com/KLubina/FitnessDashboard" target="_blank" class="app-card pos-fitness">
                     <h3>FitnessDashboard</h3>
                     <span>HTML/CSS/JS</span>
                 </a>
-                <a href="https://github.com/KLubina/NutritionPlanner" target="_blank" class="app-card">
+                <a href="https://github.com/KLubina/NutritionPlanner" target="_blank"
+                    class="app-card pos-nutrition-planner">
                     <h3>NutritionPlanner</h3>
                     <span>HTML/CSS/JS</span>
                 </a>
-                <a href="https://github.com/KLubina/StepPlanner" target="_blank" class="app-card">
+                <a href="https://github.com/KLubina/StepPlanner" target="_blank" class="app-card pos-step-planner">
                     <h3>StepPlanner</h3>
                     <span>HTML/CSS/JS</span>
                 </a>
-                <a href="https://github.com/KLubina/WeightTracker" target="_blank" class="app-card">
+                <a href="https://github.com/KLubina/WeightTracker" target="_blank" class="app-card pos-weight-tracker">
                     <h3>WeightTracker</h3>
                     <span>HTML/CSS/JS</span>
                 </a>
-                <a href="https://github.com/KLubina/NutritionTracker" target="_blank" class="app-card">
+                <a href="https://github.com/KLubina/NutritionTracker" target="_blank"
+                    class="app-card pos-nutrition-tracker">
                     <h3>NutritionTracker</h3>
                     <span>HTML/CSS/JS</span>
                 </a>
