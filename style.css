@@ -163,6 +163,53 @@ footer {
   transform: translate(-50%, -50%);
 }
 
+/* Toggle Controls */
+.landscape-toggle {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.toggle-btn {
+  padding: 10px 20px;
+  border: 2px solid #2c3e50;
+  background-color: transparent;
+  color: #2c3e50;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.toggle-btn:hover {
+  background-color: #f0f0f0;
+}
+
+.toggle-btn.active {
+  background-color: #2c3e50;
+  color: white;
+}
+
+/* Landscape Content Visibility */
+.landscape-content {
+  display: none;
+  animation: fadeIn 0.5s;
+}
+
+.landscape-content.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 /* Mobile Responsive Adjustments */
 @media (max-width: 768px) {
   .app-network-map {

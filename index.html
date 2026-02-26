@@ -27,59 +27,107 @@
 
         <section class="app-landscape">
             <h2>My App Landscape</h2>
-            <p>Essential apps I built and use daily</p>
-            <div class="app-network-map">
-                <svg class="network-lines" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-                    <defs>
-                        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-                            <polygon points="0 0, 10 3.5, 0 7" fill="#999" />
-                        </marker>
-                        <marker id="arrowhead-reverse" markerWidth="10" markerHeight="7" refX="1" refY="3.5"
-                            orient="auto">
-                            <polygon points="10 0, 0 3.5, 10 7" fill="#999" />
-                        </marker>
-                    </defs>
-                    <!-- WeightTracker (Left Bottom) to FitnessDashboard (Top Center) -->
-                    <line x1="20%" y1="75%" x2="40%" y2="25%" stroke="#999" stroke-width="2"
-                        marker-end="url(#arrowhead)" />
 
-                    <!-- NutritionTracker (Center Bottom) to NutritionPlanner (Center Middle) -->
-                    <line x1="50%" y1="78%" x2="50%" y2="62%" stroke="#999" stroke-width="2"
-                        marker-start="url(#arrowhead-reverse)" marker-end="url(#arrowhead)" />
-
-                    <!-- NutritionPlanner (Center Middle) to FitnessDashboard (Top Center) -->
-                    <line x1="50%" y1="40%" x2="50%" y2="25%" stroke="#999" stroke-width="2"
-                        marker-end="url(#arrowhead)" />
-
-                    <!-- StepPlanner (Right Middle) to FitnessDashboard (Top Center) -->
-                    <line x1="80%" y1="50%" x2="60%" y2="25%" stroke="#999" stroke-width="2"
-                        marker-end="url(#arrowhead)" />
-                </svg>
-
-                <a href="https://github.com/KLubina/FitnessDashboard" target="_blank" class="app-card pos-fitness">
-                    <h3>FitnessDashboard</h3>
-                    <span>HTML/CSS/JS</span>
-                </a>
-                <a href="https://github.com/KLubina/NutritionPlanner" target="_blank"
-                    class="app-card pos-nutrition-planner">
-                    <h3>NutritionPlanner</h3>
-                    <span>HTML/CSS/JS</span>
-                </a>
-                <a href="https://github.com/KLubina/StepPlanner" target="_blank" class="app-card pos-step-planner">
-                    <h3>StepPlanner</h3>
-                    <span>HTML/CSS/JS</span>
-                </a>
-                <a href="https://github.com/KLubina/WeightTracker" target="_blank" class="app-card pos-weight-tracker">
-                    <h3>WeightTracker</h3>
-                    <span>HTML/CSS/JS</span>
-                </a>
-                <a href="https://github.com/KLubina/NutritionTracker" target="_blank"
-                    class="app-card pos-nutrition-tracker">
-                    <h3>NutritionTracker</h3>
-                    <span>HTML/CSS/JS</span>
-                </a>
+            <!-- Toggle Buttons -->
+            <div class="landscape-toggle">
+                <button class="toggle-btn active" onclick="switchLandscape('health')">Health</button>
+                <button class="toggle-btn" onclick="switchLandscape('finance')">Finance</button>
             </div>
+
+            <!-- Health Landscape -->
+            <div id="health-landscape" class="landscape-content active">
+                <p>Essential apps I built and use daily</p>
+                <div class="app-network-map">
+                    <svg class="network-lines" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                                <polygon points="0 0, 10 3.5, 0 7" fill="#999" />
+                            </marker>
+                            <marker id="arrowhead-reverse" markerWidth="10" markerHeight="7" refX="1" refY="3.5"
+                                orient="auto">
+                                <polygon points="10 0, 0 3.5, 10 7" fill="#999" />
+                            </marker>
+                        </defs>
+                        <!-- WeightTracker (Left Bottom) to FitnessDashboard (Top Center) -->
+                        <line x1="20%" y1="75%" x2="40%" y2="25%" stroke="#999" stroke-width="2"
+                            marker-end="url(#arrowhead)" />
+
+                        <!-- NutritionTracker (Center Bottom) to NutritionPlanner (Center Middle) -->
+                        <line x1="50%" y1="78%" x2="50%" y2="62%" stroke="#999" stroke-width="2"
+                            marker-start="url(#arrowhead-reverse)" marker-end="url(#arrowhead)" />
+
+                        <!-- NutritionPlanner (Center Middle) to FitnessDashboard (Top Center) -->
+                        <line x1="50%" y1="40%" x2="50%" y2="25%" stroke="#999" stroke-width="2"
+                            marker-end="url(#arrowhead)" />
+
+                        <!-- StepPlanner (Right Middle) to FitnessDashboard (Top Center) -->
+                        <line x1="80%" y1="50%" x2="60%" y2="25%" stroke="#999" stroke-width="2"
+                            marker-end="url(#arrowhead)" />
+                    </svg>
+
+                    <a href="https://github.com/KLubina/FitnessDashboard" target="_blank" class="app-card pos-fitness">
+                        <h3>FitnessDashboard</h3>
+                        <span>HTML/CSS/JS</span>
+                    </a>
+                    <a href="https://github.com/KLubina/NutritionPlanner" target="_blank"
+                        class="app-card pos-nutrition-planner">
+                        <h3>NutritionPlanner</h3>
+                        <span>HTML/CSS/JS</span>
+                    </a>
+                    <a href="https://github.com/KLubina/StepPlanner" target="_blank" class="app-card pos-step-planner">
+                        <h3>StepPlanner</h3>
+                        <span>HTML/CSS/JS</span>
+                    </a>
+                    <a href="https://github.com/KLubina/WeightTracker" target="_blank"
+                        class="app-card pos-weight-tracker">
+                        <h3>WeightTracker</h3>
+                        <span>HTML/CSS/JS</span>
+                    </a>
+                    <a href="https://github.com/KLubina/NutritionTracker" target="_blank"
+                        class="app-card pos-nutrition-tracker">
+                        <h3>NutritionTracker</h3>
+                        <span>HTML/CSS/JS</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Finance Landscape -->
+            <div id="finance-landscape" class="landscape-content">
+                <p>Coming soon...</p>
+                <div class="app-network-map">
+                    <!-- Placeholder map for Finance -->
+                    <div class="finance-placeholder" style="text-align: center; padding-top: 100px;">
+                        <p>Finance apps will be displayed here.</p>
+                    </div>
+                </div>
+            </div>
+
         </section>
+
+        <script>
+            function switchLandscape(type) {
+                // Update buttons
+                const buttons = document.querySelectorAll('.toggle-btn');
+                buttons.forEach(btn => btn.classList.remove('active'));
+
+                // Find the clicked button based on the text or some other attribute if needed, 
+                // but since we pass 'type', we can just find which button triggered it.
+                // A simpler way is to use event.target if passed, but let's just update all content first.
+
+                // Update content visibility
+                document.querySelectorAll('.landscape-content').forEach(content => {
+                    content.classList.remove('active');
+                });
+
+                if (type === 'health') {
+                    document.getElementById('health-landscape').classList.add('active');
+                    buttons[0].classList.add('active'); // First button is Health
+                } else if (type === 'finance') {
+                    document.getElementById('finance-landscape').classList.add('active');
+                    buttons[1].classList.add('active'); // Second button is Finance
+                }
+            }
+        </script>
 
         <section class="education">
             <h2>Education</h2>
