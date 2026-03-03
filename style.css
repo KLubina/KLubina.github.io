@@ -1,78 +1,171 @@
+/* =====================
+   Base
+   ===================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   background-color: #f4f4f4;
   color: #333;
   line-height: 1.6;
 }
 
-.container {
-  max-width: 800px;
-  margin: 50px auto;
-  background: white;
-  padding: 40px;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  text-align: center;
+/* =====================
+   Navbar
+   ===================== */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
 }
 
-header h1 {
-  margin-bottom: 10px;
+.navbar.hidden {
+  transform: translateY(-100%);
+}
+
+.nav-brand {
+  font-weight: 600;
   color: #2c3e50;
+  font-size: 1rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #555;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: #2c3e50;
+}
+
+/* =====================
+   Hero
+   ===================== */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: #fff;
+  padding: 80px 20px 40px;
+}
+
+.hero h1 {
+  margin: 16px 0 8px;
+  font-size: 2.4rem;
+  color: #2c3e50;
+}
+
+.hero-tagline {
+  color: #777;
+  font-size: 1rem;
+  margin: 0 0 16px;
+}
+
+.hero-about {
+  color: #555;
+  font-size: 0.95rem;
+  max-width: 480px;
+  margin: 0 0 40px;
 }
 
 .profile-img {
-  width: 200px;
-  height: 200px;
-  object-fit: contain;
-  margin: 20px 0;
-  border: 5px solid #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #e0e0e0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.content {
-  margin-top: 20px;
-}
-
-.contact {
-  margin-top: 20px;
-}
-
-.profiles {
-  margin-top: 20px;
-}
-
-.contact a,
-.profiles a {
+.scroll-down {
+  display: inline-block;
+  font-size: 1.6rem;
   color: #2c3e50;
   text-decoration: none;
+  animation: bounce 1.8s infinite;
+  margin-top: 10px;
 }
 
-.contact a:hover,
-.profiles a:hover {
-  text-decoration: underline;
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
 }
 
-footer {
-  margin-top: 40px;
-  font-size: 0.9em;
+/* =====================
+   Sections
+   ===================== */
+.section {
+  padding: 80px 20px;
+  background: #f4f4f4;
+}
+
+.section-alt {
+  background: #fff;
+}
+
+.section-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section-inner h2 {
+  font-size: 1.8rem;
+  color: #2c3e50;
+  margin-bottom: 8px;
+}
+
+.section-sub {
   color: #777;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
-/* App Landscape Styles */
-.app-landscape,
-.education {
-  margin-top: 40px;
-}
-
+/* =====================
+   App Cards
+   ===================== */
 .apps-grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
-  margin-top: 20px;
+  margin-top: 24px;
 }
 
 .app-card {
@@ -92,17 +185,22 @@ footer {
   justify-content: center;
 }
 
+.app-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
 .app-card h3 {
-  margin: 0 0 8px 0;
-  font-size: 1.1em;
+  margin: 0 0 8px;
+  font-size: 1.05rem;
   color: #2c3e50;
 }
 
 .app-card span {
-  font-size: 0.85em;
+  font-size: 0.82em;
   color: #666;
   background-color: #f0f0f0;
-  padding: 4px 8px;
+  padding: 3px 8px;
   border-radius: 4px;
 }
 
@@ -113,13 +211,15 @@ footer {
 }
 
 .card-links a {
-  font-size: 0.8em;
+  font-size: 0.78em;
   padding: 4px 10px;
   border-radius: 4px;
   text-decoration: none;
   border: 1px solid #2c3e50;
   color: #2c3e50;
-  transition: background-color 0.2s, color 0.2s;
+  transition:
+    background-color 0.2s,
+    color 0.2s;
 }
 
 .card-links a:hover {
@@ -127,12 +227,14 @@ footer {
   color: white;
 }
 
-/* Network Map Styles */
+/* =====================
+   Network Map
+   ===================== */
 .app-network-map {
   position: relative;
   width: 100%;
-  height: 500px; /* Fixed height for absolute positioning on desktop */
-  margin: 40px auto;
+  height: 500px;
+  margin: 32px auto 0;
 }
 
 .network-lines {
@@ -145,13 +247,12 @@ footer {
   pointer-events: none;
 }
 
-/* Override app-card position for map context only */
 .app-network-map .app-card {
   position: absolute;
   z-index: 2;
-  width: 180px; /* Slightly smaller to fit layout */
-  background: white; /* Important to hide lines behind */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 180px;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 .pos-fitness {
@@ -159,48 +260,52 @@ footer {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
 .pos-nutrition-planner {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
 .pos-step-planner {
   top: 50%;
   left: 85%;
   transform: translate(-50%, -50%);
 }
-
 .pos-weight-tracker {
   top: 80%;
   left: 15%;
   transform: translate(-50%, -50%);
 }
-
 .pos-nutrition-tracker {
   top: 90%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-/* Toggle Controls */
+.finance-placeholder {
+  text-align: center;
+  padding-top: 100px;
+  color: #999;
+}
+
+/* =====================
+   Toggle
+   ===================== */
 .landscape-toggle {
   display: flex;
   justify-content: center;
   gap: 10px;
-  margin-bottom: 20px;
+  margin: 20px 0 0;
 }
 
 .toggle-btn {
-  padding: 10px 20px;
+  padding: 8px 22px;
   border: 2px solid #2c3e50;
   background-color: transparent;
   color: #2c3e50;
-  font-size: 1rem;
+  font-size: 0.95rem;
   cursor: pointer;
   border-radius: 20px;
-  transition: all 0.3s ease;
+  transition: all 0.25s ease;
 }
 
 .toggle-btn:hover {
@@ -212,10 +317,9 @@ footer {
   color: white;
 }
 
-/* Landscape Content Visibility */
 .landscape-content {
   display: none;
-  animation: fadeIn 0.5s;
+  animation: fadeIn 0.4s;
 }
 
 .landscape-content.active {
@@ -225,14 +329,69 @@ footer {
 @keyframes fadeIn {
   from {
     opacity: 0;
+    transform: translateY(6px);
   }
   to {
     opacity: 1;
+    transform: translateY(0);
   }
 }
 
-/* Mobile Responsive Adjustments */
+/* =====================
+   Footer
+   ===================== */
+.footer {
+  background: #2c3e50;
+  color: #ccc;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.footer-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  margin-bottom: 16px;
+}
+
+.footer-links a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover {
+  color: #fff;
+}
+
+.footer-copy {
+  font-size: 0.85rem;
+  margin: 0;
+  color: #888;
+}
+
+/* =====================
+   Mobile
+   ===================== */
 @media (max-width: 768px) {
+  .navbar {
+    padding: 0 20px;
+  }
+
+  .nav-links {
+    gap: 16px;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
   .app-network-map {
     height: auto;
     display: flex;

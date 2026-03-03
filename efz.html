@@ -136,6 +136,31 @@
             color: var(--link);
             text-decoration: underline;
         }
+
+        .module-box {
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .module-name {
+            color: #fff;
+            text-decoration: underline;
+            font-size: inherit;
+        }
+
+        .module-github {
+            font-size: 10px;
+            background: rgba(0, 0, 0, 0.25);
+            color: #fff;
+            padding: 2px 7px;
+            border-radius: 3px;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        .module-github:hover {
+            background: rgba(0, 0, 0, 0.5);
+        }
     </style>
 </head>
 
@@ -152,10 +177,18 @@
 
         <div class="content-row">
             <div class="column">
-                <a class="box bg-further-sw" href="https://www.modulbaukasten.ch/module/321/1/de-DE" target="_blank"
-                    rel="noopener">Modul 321 Verteilte Systeme programmieren</a>
-                <a class="box bg-further-sw" href="https://www.modulbaukasten.ch/module/335/3/de-DE" target="_blank"
-                    rel="noopener">Modul 335 Mobile-Applikation realisieren</a>
+                <div class="box bg-further-sw module-box">
+                    <a class="module-name" href="https://www.modulbaukasten.ch/module/321/1/de-DE" target="_blank"
+                        rel="noopener">Modul 321 Verteilte Systeme programmieren</a>
+                    <a class="module-github" href="https://github.com/KLubina/Modul-321" target="_blank"
+                        rel="noopener">GitHub ↗</a>
+                </div>
+                <div class="box bg-further-sw module-box">
+                    <a class="module-name" href="https://www.modulbaukasten.ch/module/335/3/de-DE" target="_blank"
+                        rel="noopener">Modul 335 Mobile-Applikation realisieren</a>
+                    <a class="module-github" href="https://github.com/KLubina/Modul-335" target="_blank"
+                        rel="noopener">GitHub ↗</a>
+                </div>
                 <div class="box label-box bg-further-sw">spezialisierte Software-Entwicklung</div>
             </div>
             <div class="column">
@@ -166,8 +199,12 @@
             </div>
             <div class="column"></div>
             <div class="column">
-                <a class="box bg-devops" href="https://www.modulbaukasten.ch/module/324/1/de-DE" target="_blank"
-                    rel="noopener">Modul 324 DevOps-Prozesse mit Tools unterstützen</a>
+                <div class="box bg-devops module-box">
+                    <a class="module-name" href="https://www.modulbaukasten.ch/module/324/1/de-DE" target="_blank"
+                        rel="noopener">Modul 324 DevOps-Prozesse mit Tools unterstützen</a>
+                    <a class="module-github" href="https://github.com/KLubina/Modul-324" target="_blank"
+                        rel="noopener">GitHub ↗</a>
+                </div>
                 <div class="box label-box bg-devops">DevOps</div>
             </div>
             <div class="column"></div>
@@ -180,17 +217,29 @@
                 <!-- spezialisierte Software-Entwicklung leer -->
             </div>
             <div class="column">
-                <a class="box bg-web-dev" href="https://www.modulbaukasten.ch/module/223/3/de-DE" target="_blank"
-                    rel="noopener">Modul 223 Multi-User-Applikationen objektorientiert realisieren</a>
+                <div class="box bg-web-dev module-box">
+                    <a class="module-name" href="https://www.modulbaukasten.ch/module/223/3/de-DE" target="_blank"
+                        rel="noopener">Modul 223 Multi-User-Applikationen objektorientiert realisieren</a>
+                    <a class="module-github" href="https://github.com/KLubina/Modul-223" target="_blank"
+                        rel="noopener">GitHub ↗</a>
+                </div>
                 <div class="box label-box bg-web-dev">Web-Entwicklung</div>
             </div>
             <div class="column">
-                <a class="box bg-general-prog" href="https://www.modulbaukasten.ch/module/183/3/de-DE" target="_blank"
-                    rel="noopener">Modul 183 Applikationssicherheit implementieren</a>
+                <div class="box bg-general-prog module-box">
+                    <a class="module-name" href="https://www.modulbaukasten.ch/module/183/3/de-DE" target="_blank"
+                        rel="noopener">Modul 183 Applikationssicherheit implementieren</a>
+                    <a class="module-github" href="https://github.com/KLubina/Modul-183" target="_blank"
+                        rel="noopener">GitHub ↗</a>
+                </div>
                 <a class="box bg-general-prog" href="https://www.modulbaukasten.ch/module/323/1/de-DE" target="_blank"
                     rel="noopener">Modul 323 Funktional Programmieren</a>
-                <a class="box bg-general-prog" href="https://www.modulbaukasten.ch/module/450/1/de-DE" target="_blank"
-                    rel="noopener">Modul 450 Applikationen testen</a>
+                <div class="box bg-general-prog module-box">
+                    <a class="module-name" href="https://www.modulbaukasten.ch/module/450/1/de-DE" target="_blank"
+                        rel="noopener">Modul 450 Applikationen testen</a>
+                    <a class="module-github" href="https://github.com/KLubina/Modul-450" target="_blank"
+                        rel="noopener">GitHub ↗</a>
+                </div>
                 <div class="box label-box bg-general-prog">Allgemeine Programmierung</div>
             </div>
             <div class="column"></div>
@@ -206,19 +255,39 @@
                 <!-- spezialisierte Software-Entwicklung leer -->
             </div>
             <div class="column">
-                <a class="box bg-web-dev" href="https://www.modulbaukasten.ch/module/295/1/de-DE" target="_blank"
-                    rel="noopener">Modul 295 Backend für Applikationen realisieren</a>
-                <a class="box bg-web-dev" href="https://www.modulbaukasten.ch/module/294/1/de-DE" target="_blank"
-                    rel="noopener">Modul 294 Frontend einer interaktiven Webapplikation realisieren</a>
-                <a class="box bg-web-dev" href="https://www.modulbaukasten.ch/module/322/1/de-DE" target="_blank"
-                    rel="noopener">Modul 322 Benutzerschnittstellen entwerfen und implementieren</a>
-                <a class="box bg-web-dev" href="https://www.modulbaukasten.ch/module/293/1/de-DE" target="_blank"
-                    rel="noopener">Modul 293 Webauftritt erstellen und veröffentlichen</a>
+                <div class="box bg-web-dev module-box">
+                    <a class="module-name" href="https://www.modulbaukasten.ch/module/295/1/de-DE" target="_blank"
+                        rel="noopener">Modul 295 Backend für Applikationen realisieren</a>
+                    <a class="module-github" href="https://github.com/KLubina/Modul-294-und-295" target="_blank"
+                        rel="noopener">GitHub ↗</a>
+                </div>
+                <div class="box bg-web-dev module-box">
+                    <a class="module-name" href="https://www.modulbaukasten.ch/module/294/1/de-DE" target="_blank"
+                        rel="noopener">Modul 294 Frontend einer interaktiven Webapplikation realisieren</a>
+                    <a class="module-github" href="https://github.com/KLubina/Modul-294-und-295" target="_blank"
+                        rel="noopener">GitHub ↗</a>
+                </div>
+                <div class="box bg-web-dev module-box">
+                    <a class="module-name" href="https://www.modulbaukasten.ch/module/322/1/de-DE" target="_blank"
+                        rel="noopener">Modul 322 Benutzerschnittstellen entwerfen und implementieren</a>
+                    <a class="module-github" href="https://github.com/KLubina/Modul-322" target="_blank"
+                        rel="noopener">GitHub ↗</a>
+                </div>
+                <div class="box bg-web-dev module-box">
+                    <a class="module-name" href="https://www.modulbaukasten.ch/module/293/1/de-DE" target="_blank"
+                        rel="noopener">Modul 293 Webauftritt erstellen und veröffentlichen</a>
+                    <a class="module-github" href="https://github.com/KLubina/Modul-293" target="_blank"
+                        rel="noopener">GitHub ↗</a>
+                </div>
                 <div class="box label-box bg-web-dev">Web-Entwicklung</div>
             </div>
             <div class="column">
-                <a class="box bg-general-prog" href="https://www.modulbaukasten.ch/module/320/1/de-DE" target="_blank"
-                    rel="noopener">Modul 320 Objektorientiert programmieren</a>
+                <div class="box bg-general-prog module-box">
+                    <a class="module-name" href="https://www.modulbaukasten.ch/module/320/1/de-DE" target="_blank"
+                        rel="noopener">Modul 320 Objektorientiert programmieren</a>
+                    <a class="module-github" href="https://github.com/KLubina/Modul-320" target="_blank"
+                        rel="noopener">GitHub ↗</a>
+                </div>
                 <div class="box label-box bg-general-prog">Allgemeine Programmierung</div>
             </div>
             <div class="column">
@@ -227,22 +296,42 @@
                 <div class="box label-box bg-green-light">Datenbank</div>
             </div>
             <div class="column">
-                <a class="box bg-devops" href="https://www.modulbaukasten.ch/module/347/1/de-DE" target="_blank"
-                    rel="noopener">Modul 347 Dienst mit Container anwenden</a>
+                <div class="box bg-devops module-box">
+                    <a class="module-name" href="https://www.modulbaukasten.ch/module/347/1/de-DE" target="_blank"
+                        rel="noopener">Modul 347 Dienst mit Container anwenden</a>
+                    <a class="module-github" href="https://github.com/KLubina/Modul-347" target="_blank"
+                        rel="noopener">GitHub ↗</a>
+                </div>
                 <a class="box bg-devops" href="https://www.modulbaukasten.ch/module/346/1/de-DE" target="_blank"
                     rel="noopener">Modul 346 Cloud Lösungen konzipieren und realisieren</a>
-                <a class="box bg-devops" href="https://www.modulbaukasten.ch/module/210/1/de-DE" target="_blank"
-                    rel="noopener">Modul 210 Public Cloud für Anwendungen nutzen</a>
+                <div class="box bg-devops module-box">
+                    <a class="module-name" href="https://www.modulbaukasten.ch/module/210/1/de-DE" target="_blank"
+                        rel="noopener">Modul 210 Public Cloud für Anwendungen nutzen</a>
+                    <a class="module-github" href="https://github.com/KLubina/Modul-210" target="_blank"
+                        rel="noopener">GitHub ↗</a>
+                </div>
                 <div class="box label-box bg-devops">DevOps</div>
             </div>
             <div class="column"></div>
             <div class="column">
-                <a class="box bg-blue" href="https://www.modulbaukasten.ch/module/426/1/de-DE" target="_blank"
-                    rel="noopener">Modul 426 Software mit agilen Methoden entwickeln</a>
-                <a class="box bg-blue" href="https://www.modulbaukasten.ch/module/245/1/de-DE" target="_blank"
-                    rel="noopener">Modul 245 Innovative ICT-Lösungen umsetzen</a>
-                <a class="box bg-blue" href="https://www.modulbaukasten.ch/module/241/1/de-DE" target="_blank"
-                    rel="noopener">Modul 241 Innovative ICT-Lösungen initialisieren</a>
+                <div class="box bg-blue module-box">
+                    <a class="module-name" href="https://www.modulbaukasten.ch/module/426/1/de-DE" target="_blank"
+                        rel="noopener">Modul 426 Software mit agilen Methoden entwickeln</a>
+                    <a class="module-github" href="https://github.com/KLubina/Modul-426" target="_blank"
+                        rel="noopener">GitHub ↗</a>
+                </div>
+                <div class="box bg-blue module-box">
+                    <a class="module-name" href="https://www.modulbaukasten.ch/module/245/1/de-DE" target="_blank"
+                        rel="noopener">Modul 245 Innovative ICT-Lösungen umsetzen</a>
+                    <a class="module-github" href="https://github.com/KLubina/Modul-241-und-245" target="_blank"
+                        rel="noopener">GitHub ↗</a>
+                </div>
+                <div class="box bg-blue module-box">
+                    <a class="module-name" href="https://www.modulbaukasten.ch/module/241/1/de-DE" target="_blank"
+                        rel="noopener">Modul 241 Innovative ICT-Lösungen initialisieren</a>
+                    <a class="module-github" href="https://github.com/KLubina/Modul-241-und-245" target="_blank"
+                        rel="noopener">GitHub ↗</a>
+                </div>
                 <div class="box label-box bg-blue">Projektmanagement</div>
             </div>
         </div>
@@ -256,42 +345,89 @@
                 <!-- Web-Entwicklung leer -->
             </div>
             <div class="column">
-                <a class="box bg-general-prog" href="https://www.modulbaukasten.ch/module/114/4/de-DE" target="_blank"
-                    rel="noopener">Modul 114 Codierungs-, Kompressions- und Verschlüsselungsverfahren einsetzen
-                </a>
-                <a class="box bg-general-prog" href="https://www.modulbaukasten.ch/module/319/1/de-DE" target="_blank"
-                    rel="noopener">Modul 319 Applikationen entwerfen und implementieren</a>
+                <div class="box bg-general-prog module-box">
+                    <a class="module-name" href="https://www.modulbaukasten.ch/module/114/4/de-DE" target="_blank"
+                        rel="noopener">Modul 114 Codierungs-, Kompressions- und Verschlüsselungsverfahren einsetzen</a>
+                    <a class="module-github" href="https://github.com/KLubina/Modul-114" target="_blank"
+                        rel="noopener">GitHub ↗</a>
+                </div>
+                <div class="box bg-general-prog module-box">
+                    <a class="module-name" href="https://www.modulbaukasten.ch/module/319/1/de-DE" target="_blank"
+                        rel="noopener">Modul 319 Applikationen entwerfen und implementieren</a>
+                    <a class="module-github" href="https://github.com/KLubina/Modul-319" target="_blank"
+                        rel="noopener">GitHub ↗</a>
+                </div>
                 <div class="box label-box bg-general-prog">Allgemeine Programmierung</div>
             </div>
             <div class="column">
-                <a class="box bg-green-light" href="https://www.modulbaukasten.ch/module/106/1/de-DE" target="_blank"
-                    rel="noopener">Modul 106 Datenbanken abfragen, bearbeiten und warten</a>
-                <a class="box bg-green-light" href="https://www.modulbaukasten.ch/module/164/1/de-DE" target="_blank"
-                    rel="noopener">Modul 164 Datenbanken erstellen und Daten einfügen</a>
-                <a class="box bg-green-light" href="https://www.modulbaukasten.ch/module/162/1/de-DE" target="_blank"
-                    rel="noopener">Modul 162 Daten analysieren und modellieren</a>
+                <div class="box bg-green-light module-box">
+                    <a class="module-name" href="https://www.modulbaukasten.ch/module/106/1/de-DE" target="_blank"
+                        rel="noopener">Modul 106 Datenbanken abfragen, bearbeiten und warten</a>
+                    <a class="module-github" href="https://github.com/KLubina/Modul-106" target="_blank"
+                        rel="noopener">GitHub ↗</a>
+                </div>
+                <div class="box bg-green-light module-box">
+                    <a class="module-name" href="https://www.modulbaukasten.ch/module/164/1/de-DE" target="_blank"
+                        rel="noopener">Modul 164 Datenbanken erstellen und Daten einfügen</a>
+                    <a class="module-github" href="https://github.com/KLubina/Modul-164" target="_blank"
+                        rel="noopener">GitHub ↗</a>
+                </div>
+                <div class="box bg-green-light module-box">
+                    <a class="module-name" href="https://www.modulbaukasten.ch/module/162/1/de-DE" target="_blank"
+                        rel="noopener">Modul 162 Daten analysieren und modellieren</a>
+                    <a class="module-github" href="https://github.com/KLubina/Modul-162" target="_blank"
+                        rel="noopener">GitHub ↗</a>
+                </div>
                 <div class="box label-box bg-green-light">Datenbank</div>
             </div>
             <div class="column"></div>
             <div class="column">
-                <a class="box bg-grey-network" href="https://www.modulbaukasten.ch/module/122/3/de-DE" target="_blank"
-                    rel="noopener">Modul 122 Abläufe mit einer Scriptsprache automatisieren</a>
-                <a class="box bg-grey-network" href="https://www.modulbaukasten.ch/module/187/1/de-DE" target="_blank"
-                    rel="noopener">Modul 187 ICT-Arbeitsplatz mit Betriebssystem in Betrieb nehmen</a>
-                <a class="box bg-grey-network" href="https://www.modulbaukasten.ch/module/117/5/de-DE" target="_blank"
-                    rel="noopener">Modul 117 Informatik- und Netzinfrastruktur für ein kleines Unternehmen
-                    realisieren</a>
+                <div class="box bg-grey-network module-box">
+                    <a class="module-name" href="https://www.modulbaukasten.ch/module/122/3/de-DE" target="_blank"
+                        rel="noopener">Modul 122 Abläufe mit einer Scriptsprache automatisieren</a>
+                    <a class="module-github" href="https://github.com/KLubina/Modul-122" target="_blank"
+                        rel="noopener">GitHub ↗</a>
+                </div>
+                <div class="box bg-grey-network module-box">
+                    <a class="module-name" href="https://www.modulbaukasten.ch/module/187/1/de-DE" target="_blank"
+                        rel="noopener">Modul 187 ICT-Arbeitsplatz mit Betriebssystem in Betrieb nehmen</a>
+                    <a class="module-github" href="https://github.com/KLubina/Modul-187" target="_blank"
+                        rel="noopener">GitHub ↗</a>
+                </div>
+                <div class="box bg-grey-network module-box">
+                    <a class="module-name" href="https://www.modulbaukasten.ch/module/117/5/de-DE" target="_blank"
+                        rel="noopener">Modul 117 Informatik- und Netzinfrastruktur für ein kleines Unternehmen
+                        realisieren</a>
+                    <a class="module-github" href="https://github.com/KLubina/Modul-117" target="_blank"
+                        rel="noopener">GitHub ↗</a>
+                </div>
                 <div class="box label-box bg-grey-network">Netzwerk-Grundlagen</div>
             </div>
             <div class="column">
-                <a class="box bg-blue" href="https://www.modulbaukasten.ch/module/431/3/de-DE" target="_blank"
-                    rel="noopener">Modul 431 Aufträge im eigenen Berufsumfeld selbstständig durchführen</a>
-                <a class="box bg-blue" href="https://www.modulbaukasten.ch/module/254/3/de-DE" target="_blank"
-                    rel="noopener">Modul 254 Geschäftsprozesse im eigenen Berufsfeld beschreiben</a>
-                <a class="box bg-blue" href="https://www.modulbaukasten.ch/module/306/4/de-DE" target="_blank"
-                    rel="noopener">Modul 306 Kleinprojekte im eigenen Berufsfeld abwickeln</a>
-                <a class="box bg-blue" href="https://www.modulbaukasten.ch/module/231/1/de-DE" target="_blank"
-                    rel="noopener">Modul 231 Datenschutz und Datensicherheit anwenden</a>
+                <div class="box bg-blue module-box">
+                    <a class="module-name" href="https://www.modulbaukasten.ch/module/431/3/de-DE" target="_blank"
+                        rel="noopener">Modul 431 Aufträge im eigenen Berufsumfeld selbstständig durchführen</a>
+                    <a class="module-github" href="https://github.com/KLubina/Modul-431" target="_blank"
+                        rel="noopener">GitHub ↗</a>
+                </div>
+                <div class="box bg-blue module-box">
+                    <a class="module-name" href="https://www.modulbaukasten.ch/module/254/3/de-DE" target="_blank"
+                        rel="noopener">Modul 254 Geschäftsprozesse im eigenen Berufsfeld beschreiben</a>
+                    <a class="module-github" href="https://github.com/KLubina/Modul-254" target="_blank"
+                        rel="noopener">GitHub ↗</a>
+                </div>
+                <div class="box bg-blue module-box">
+                    <a class="module-name" href="https://www.modulbaukasten.ch/module/306/4/de-DE" target="_blank"
+                        rel="noopener">Modul 306 Kleinprojekte im eigenen Berufsfeld abwickeln</a>
+                    <a class="module-github" href="https://github.com/KLubina/Modul-306" target="_blank"
+                        rel="noopener">GitHub ↗</a>
+                </div>
+                <div class="box bg-blue module-box">
+                    <a class="module-name" href="https://www.modulbaukasten.ch/module/231/1/de-DE" target="_blank"
+                        rel="noopener">Modul 231 Datenschutz und Datensicherheit anwenden</a>
+                    <a class="module-github" href="https://github.com/KLubina/Modul-231" target="_blank"
+                        rel="noopener">GitHub ↗</a>
+                </div>
                 <div class="box label-box bg-blue">Projektmanagement</div>
             </div>
         </div>
