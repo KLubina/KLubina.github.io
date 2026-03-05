@@ -185,11 +185,6 @@ body {
   justify-content: center;
 }
 
-.app-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-}
-
 .app-card h3 {
   margin: 0 0 8px;
   font-size: 1.05rem;
