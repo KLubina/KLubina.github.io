@@ -39,6 +39,7 @@
             <div class="landscape-toggle">
                 <button class="toggle-btn active" onclick="switchLandscape('health')">Health</button>
                 <button class="toggle-btn" onclick="switchLandscape('finance')">Finance</button>
+                <button class="toggle-btn" onclick="switchLandscape('productivity')">Productivity</button>
             </div>
 
             <!-- Health Landscape -->
@@ -106,14 +107,57 @@
                         </div>
                     </div>
                 </div>
+                <div class="standalone-apps">
+                    <p class="standalone-label">Standalone</p>
+                    <div class="standalone-grid">
+                        <div class="app-card">
+                            <h3>SleepSpeaker</h3>
+                            <span>Custom Speaker</span>
+                            <div class="card-links">
+                                <a href="https://github.com/KLubina/SleepSpeaker" target="_blank">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Productivity Landscape -->
+            <div id="productivity-landscape" class="landscape-content">
+                <p class="section-sub">Apps for task and routine management</p>
+                <div class="standalone-grid" style="margin-top: 32px;">
+                    <div class="app-card">
+                        <h3>RoutineTracker</h3>
+                        <span>HTML/CSS/JS</span>
+                        <div class="card-links">
+                            <a href="https://github.com/KLubina/RoutineTracker-for-Young" target="_blank">GitHub</a>
+                        </div>
+                    </div>
+                    <div class="app-card">
+                        <h3>RoutinePlanner</h3>
+                        <span>HTML/CSS/JS</span>
+                        <div class="card-links">
+                            <a href="https://github.com/KLubina/RoutinePlanner-Prod" target="_blank">GitHub</a>
+                        </div>
+                    </div>
+                    <div class="app-card">
+                        <h3>TaskPlanner</h3>
+                        <span>HTML/CSS/JS</span>
+                        <div class="card-links">
+                            <a href="https://github.com/KLubina/TaskPlanner-Prod" target="_blank">GitHub</a>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <!-- Finance Landscape -->
             <div id="finance-landscape" class="landscape-content">
-                <p class="section-sub">Coming soon...</p>
+                <p class="section-sub">Essential apps I built and use daily</p>
                 <div class="app-network-map">
-                    <div class="finance-placeholder">
-                        <p>Finance apps will be displayed here.</p>
+                    <div class="app-card pos-cost-tracker">
+                        <h3>CostTracker</h3>
+                        <div class="card-links">
+                            <a href="https://github.com/KLubina/CostTracker" target="_blank">GitHub</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -187,6 +231,9 @@
             } else if (type === 'finance') {
                 document.getElementById('finance-landscape').classList.add('active');
                 buttons[1].classList.add('active');
+            } else if (type === 'productivity') {
+                document.getElementById('productivity-landscape').classList.add('active');
+                buttons[2].classList.add('active');
             }
         }
     </script>

@@ -276,10 +276,32 @@ body {
   transform: translate(-50%, -50%);
 }
 
-.finance-placeholder {
+.pos-cost-tracker {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.standalone-apps {
+  margin-top: 20px;
+  border-top: 1px dashed #ccc;
+  padding-top: 16px;
+}
+
+.standalone-label {
   text-align: center;
-  padding-top: 100px;
-  color: #999;
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #aaa;
+  margin-bottom: 14px;
+}
+
+.standalone-grid {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
 }
 
 /* =====================
